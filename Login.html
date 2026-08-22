@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loginusn</title>
+  
+  <style>
+    body {
+  background: linear-gradient(to right, #0F172A, #00E5FF);
+    }
+    .trminal_login {
+      display:flex;
+      background: #111827;
+      width:300px;
+      height: 400px;
+      align-items: center;
+      border-radius: 20px;
+      padding: 10px;
+      top:50;
+      position: relative;
+      
+      justify-content: center;
+      flex-direction: column;
+      margin: auto;
+      gap: 10px;
+      transform: translateY(50%);
+      box-shadow: 0 0 20px rgba(0,229,255,.5);
+    }
+    
+    .image_login img {
+      height: 150px;
+      margin:auto;
+      width: 150px;
+      border-radius:50%;
+      box-shadow: 0 0 20px rgba(0,229,255,.5);
+      
+    }
+    h1 {
+      font-size: 30px;
+      color:#fff;
+    }
+    button {
+      width: 80%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  cursor:pointer;
+  font-weight: bold;
+  transition: .3s;
+  background: transparent;
+  color: white;
+  border: 1px solid #00E5FF;
+    }
+input{
+  width: 80%;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  cursor:pointer;
+  font-weight: bold;
+  transition: .3s;
+  background: transparent;
+  color: white;
+  border: 1px solid #00E5FF;
+}
+    input:focus {
+  outline: none;
+  border: 2px solid #38BDF8;
+  box-shadow: 0 0 10px #38BDF8;
+    }
+    
+    button:hover{
+      transform: scale(1.08);
+      color: #0066FF;
+      background:#00E5FF;
+        box-shadow: 0 0 20px #00E5FF; 
+    }
+
+    #error {
+  color: #38BDF8;
+  font-size: 10px;
+  text-align: center;
+    }
+  </style>
+  
+</head>
+  
+<body>
+  <div class="trminal_login">
+    <div class="image_login">
+    <img src="https://g.top4top.io/p_3877ilyay1.jpg" alt="maxlockv">
+  </div>
+    <h1>Website Maxlockv</h1>
+    <input type="text" id="username">
+    <input type="password" id="password">
+    <button id="btn_login">start</button>
+    <p id="error"></p>
+
+<!--Untuk mengecek password dan username-->
+    <script>
+      const username = document.getElementById("username");
+      const password = document.getElementById("password");
+      const btn_login = document.getElementById("btn_login");
+      btn_login.addEventListener("click", function(){
+
+        if (username.value ==="maxlockv" && password.value === "12345") {
+          window.location.href = "Home.html";
+        } 
+        else {
+          error.textContent="Pasword/Username Salah";
+        }
+      });
+      
+    </script>
+  </>
+ </body>
+  
+</html>

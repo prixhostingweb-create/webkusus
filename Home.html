@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For You 💗</title>
+
+  <style>
+
+    /* =========================
+       BACKGROUND HALAMAN
+       ========================= */
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: Arial, sans-serif;
+
+      background: linear-gradient(
+        to right,
+        #ff9a9e,
+        #fad0c4
+      );
+    }
+
+
+    /* =========================
+       KOTAK UTAMA
+       ========================= */
+    .container {
+      width: 80%;
+      max-width: 400px;
+
+      padding: 35px 25px;
+
+      text-align: center;
+
+      background: rgba(255, 255, 255, 0.85);
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* =========================
+       ICON HATI
+       ========================= */
+    .heart {
+      font-size: 60px;
+
+      animation: denyut 1.5s infinite;
+    }
+
+
+    /* Animasi hati */
+    @keyframes denyut {
+
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+
+    }
+
+
+    /* =========================
+       JUDUL
+       ========================= */
+    h1 {
+      color: #d6336c;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       TEKS
+       ========================= */
+    .subtitle {
+      color: #555;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================
+       PESAN
+       ========================= */
+    #message {
+      margin-top: 20px;
+
+      color: #d6336c;
+
+      font-weight: bold;
+
+      line-height: 1.6;
+
+      min-height: 50px;
+    }
+
+
+    /* =========================
+       BUTTON
+       ========================= */
+    button {
+      margin-top: 15px;
+
+      width: 180px;
+      height: 45px;
+
+      border: none;
+      border-radius: 25px;
+
+      background: linear-gradient(
+        to right,
+        #ff4b7d,
+        #ff758c
+      );
+
+      color: white;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+
+    /* Efek ketika tombol disentuh */
+    button:hover {
+      transform: scale(1.08);
+
+      box-shadow:
+        0 5px 20px rgba(255, 75, 125, 0.4);
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       KONTEN UTAMA
+       ========================= -->
+
+  <div class="container">
+
+    <div class="heart">
+      💗
+    </div>
+
+
+    <h1>
+      For Someone Special
+    </h1>
+
+
+    <p class="subtitle">
+      Ada sesuatu yang ingin disampaikan...
+    </p>
+
+
+    <!-- Pesan akan muncul di sini -->
+    <p id="message"></p>
+
+
+    <button id="openBtn">
+      Buka Pesan 💌
+    </button>
+
+  </div>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+       ========================= -->
+
+  <script>
+
+    /* Mengambil tombol */
+    const openBtn =
+      document.getElementById("openBtn");
+
+
+    /* Mengambil tempat pesan */
+    const message =
+      document.getElementById("message");
+
+
+    /* Ketika tombol diklik */
+    openBtn.addEventListener("click", function() {
+
+      message.textContent =
+        "Terima kasih sudah menjadi bagian dari cerita ini. Semoga hari-harimu selalu dipenuhi kebahagiaan. 💗";
+
+      /* Mengubah tulisan tombol */
+      openBtn.textContent =
+        "Pesan Terbuka 💕";
+
+    });
+
+  </script>
+
+
+</body>
+</html>
